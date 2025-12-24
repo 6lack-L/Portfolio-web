@@ -104,7 +104,8 @@ const LetterGlitch = ({
 
   const hexToRgb = (hex: string) => {
     const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-    hex = hex.replace(shorthandRegex, (m, r, g, b) => {
+    hex = hex.replace(shorthandRegex, (_m, r, g, b) => {
+      void _m;
       return r + r + g + g + b + b;
     });
 
